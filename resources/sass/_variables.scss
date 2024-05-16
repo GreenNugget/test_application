@@ -1,7 +1,39 @@
 // Body
-$body-bg: #f8fafc;
+$body-bg: #edf2f4;
 
 // Typography
-$font-family-sans-serif: 'Nunito', sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+$font-family-sans-serif: 'Righteous', sans-serif;
+
+// Colors
+$primary: #1d3557;
+$light: #edf2f4;
+$dark: #1b263b;
+$secondary: #0077b6;
+
+//Rewriting Styles
+$border-radius: 1.5rem;
+
+.dropdown-item:hover {
+    color: #0077b6 !important;
+    background-color: transparent !important;
+}
+
+// Personalized styles
+h5.price{
+    font-family: "Baloo 2", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+}
+
+.w-30{
+    width: 30% !important;
+}
+
+.h-30em{
+    height: 30em !important;
+}
+
+.top-30{
+    top: 30%;
+}
