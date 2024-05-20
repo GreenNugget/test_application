@@ -12,11 +12,25 @@ $secondary: #0077b6;
 
 //Rewriting Styles
 $border-radius: 1.5rem;
+$border-width: 2px;
+
+input.form-control {
+    border-radius: 10px;
+}
 
 .dropdown-item:hover {
     color: #0077b6 !important;
     background-color: transparent !important;
 }
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 430px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px
+);
 
 // Personalized styles
 h5.price{
@@ -26,8 +40,20 @@ h5.price{
     font-style: normal;
 }
 
+.w-10 {
+    width: 10% !important;
+}
+
 .w-30{
     width: 30% !important;
+}
+
+.w-40{
+    width: 40% !important;
+}
+
+.w-60{
+    width: 60% !important;
 }
 
 .h-30em{
@@ -36,4 +62,68 @@ h5.price{
 
 .top-30{
     top: 30%;
+}
+
+.top-20 {
+    top: 20%;
+}
+
+.filter-white{
+    filter: brightness(0) saturate(100%) invert(93%) sepia(5%) saturate(148%) hue-rotate(154deg) brightness(105%) contrast(92%);
+}
+
+@mixin border-radius($radius) {
+    @media (max-width: 576px) {
+        border-radius: $radius;
+    }
+}
+
+.bottom-border {
+    @include border-radius(15px);
+}
+
+@mixin position-login-card($position, $width){
+    @media (max-width: 932px) {
+        top: $position;
+        width: $width;
+    }
+
+    @media (min-width: 932px){
+        left: 50% !important;
+        transform: translateX(100%) !important;
+    }
+}
+
+.top-login-card{
+    @include position-login-card(80% !important, auto !important);
+}
+
+@mixin register-card($width, $position){
+    @media (max-width: 932px) {
+        top: $position;
+        width: $width;
+        transform: translateX(20%) !important;
+    }
+}
+
+.register-card-component{
+    @include register-card(auto !important, 20% !important);
+}
+
+@mixin center-img($tranform, $margin){
+    @media (min-width: 932px) {
+        margin-left: $margin;
+        transform: translateY($tranform) !important;
+    }
+
+    @media (max-width: 932px) {
+        width: 40% !important;
+        margin-left: 30%;
+        transform: translateY($tranform) !important;
+    }
+}
+
+.col-login-img{
+    width: 30% !important;
+    @include center-img(80%, 20%);
 }
